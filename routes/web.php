@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('acceuil');
-})->name('acceuil');
+    return view('accueil');
+})->name('accueil');
 
 Route::get('/indentification', function () {
     return view('indentification');
