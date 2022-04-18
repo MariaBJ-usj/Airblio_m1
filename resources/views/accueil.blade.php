@@ -1,5 +1,9 @@
 @extends('layouts/client_master')
 
+@section('title')
+Accueil
+@endsection
+
 @section('page-content')
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">

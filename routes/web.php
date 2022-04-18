@@ -24,3 +24,7 @@ Route::get('/', function () {
 Route::get('/indentification', function () {
     return view('indentification');
 })->name('indentification');
+
+Route::get('/connexion', function () {
+    return view('connexion');
+})->name('connexion');

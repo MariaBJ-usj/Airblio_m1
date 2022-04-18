@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" text="css" href="{{url('/css/app.css')}} ">
-    <title>Airblio Acceuil</title>
+    <title>Airblio @yield("title")</title>
 </head>
 <body class="bg-gray 700 text-white">
     <header>
@@ -19,7 +19,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
