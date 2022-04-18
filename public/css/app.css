@@ -1,3 +1,11 @@
 #nav_logo{
     width: 120px;
 }
+
+.carousel-item .d-md-block{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#about_section h1{
+    color: black;
+}

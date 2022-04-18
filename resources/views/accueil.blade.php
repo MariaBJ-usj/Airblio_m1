@@ -9,21 +9,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{url('/images/plongee.jpg')}}" class="d-block w-100" alt="...">
+        <img src="{{url('/images/carousel_image_1.jpg')}}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{url('/images/bateau.jpg')}}" class="d-block w-100" alt="...">
+        <img src="{{url('/images/carousel_image_2.jpg')}}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{url('/images/equipement.jpg')}}" class="d-block w-100" alt="...">
+        <img src="{{url('/images/carousel_image_3.jpg')}}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -39,4 +39,14 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+  <section id="about_section" class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Qui sommes-nous?</h1>
+        <p class="lead text-muted">Airblio est une entreprise spécialisée dans l’équipement haut de gamme pour
+          les plongées en mer et l’accompagnement des entreprises.</p>
+      </div>
+    </div>
+  </section>
 @endsection
