@@ -9,3 +9,8 @@
 #about_section h1{
     color: black;
 }
+
+#demande_intervention{
+    width: 90%;
+    margin: auto;
+}

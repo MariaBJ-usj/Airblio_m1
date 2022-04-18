@@ -17,10 +17,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/accueil', function () {
+    return view('accueil');
+})->name('accueil');
+
 Route::get('/', function () {
     return view('accueil');
 })->name('accueil');
 
-Route::get('/indentification', function () {
-    return view('indentification');
-})->name('indentification');
+Route::get('/demande_intervention', function () {
+    return view('demande_intervention');
+})->name('demande_intervention');
+
+Route::get('/equipes', function () {
+    return view('equipes');
+})->name('equipes');
