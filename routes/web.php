@@ -28,3 +28,7 @@ Route::get('/indentification', function () {
 Route::get('/connexion', function () {
     return view('connexion');
 })->name('connexion');
+
+Route::get('/demande_intervention', function () {
+    return view('demande_intervention');
+})->name('demande_intervention');

@@ -1,3 +1,7 @@
+main{
+    color: black;
+}
+
 #nav_logo{
     width: 120px;
 }
@@ -16,3 +20,16 @@
     padding: 15px;
     margin: auto;
 }
+
+#demande_interventionForm{
+    width: 50%;
+    margin: 0 40px 0 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#map{
+    display: inline-block;
+    vertical-align: middle;
+}
+
