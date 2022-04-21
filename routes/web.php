@@ -32,3 +32,7 @@ Route::get('/connexion', function () {
 Route::get('/demande_intervention', function () {
     return view('demande_intervention');
 })->name('demande_intervention');
+
+Route::get('/formulaire_intervention', function () {
+    return view('formulaire_intervention');
+})->name('formulaire_intervention');
