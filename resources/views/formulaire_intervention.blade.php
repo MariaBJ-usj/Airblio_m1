@@ -1,4 +1,4 @@
-@extends('layouts/client_master')
+@extends('layouts/admin_master')
 
 @section('page-content')
 <section id="about_section" class="py-5 text-center container">

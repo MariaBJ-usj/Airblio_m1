@@ -23,16 +23,22 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
+                <a class="nav-link active" href="#">Commandes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Intervention</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Matériels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Clients</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Equipes</a>
               </li>
             </ul>
-            <span class="navbar-text">S'identifier
+            <span class="navbar-text">Admin
             </span>
           </div>
         </div>
