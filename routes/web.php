@@ -36,3 +36,7 @@ Route::get('/demande_intervention', function () {
 Route::get('/formulaire_intervention', function () {
     return view('formulaire_intervention');
 })->name('formulaire_intervention');
+
+Route::get('/equipes', function () {
+    return view('equipes');
+})->name('equipes');
