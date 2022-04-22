@@ -7,7 +7,7 @@
         });
     </script>
     <section id="admin_title" class="text-center">
-        <div class="col-lg-6 col-md-8 mx-auto">
+        <div class="col-lg-6 col-md-8 mx-auto pt-5">
             <h2 class="fw-light">Matériels</h2>
         </div>
     </section>

@@ -76,7 +76,7 @@
                 <!-- Brand -->
                 <a class="navbar-brand" href="#">
                     <img src="{{ url('/logos/png/Color logo - no background.png') }}" height="25" alt="Logo"
-                        loading="lazy" id="admin_logo" />
+                        loading="lazy" id="admin_navbar_logo" />
                 </a>
             </div>
             <div>
@@ -89,11 +89,10 @@
     <!--Main Navigation-->
 
     <!--Main layout-->
-    <main style="margin-top: 58px;">
-        <div class="container pt-4"></div>
+    <main style="margin-top: 30px">
+        <div class="container pt-4">
+          @yield("page-content")</div>
     </main>
-    <!--Main layout-->
-    <main> @yield("page-content")</main>
     <footer>Footer</footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">

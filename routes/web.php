@@ -44,3 +44,7 @@ Route::get('/equipes', function () {
 Route::get('/materiels', function () {
     return view('materiels');
 })->name('materiels');
+
+Route::get('/materiel_details', function () {
+    return view('materiel_details');
+})->name('materiel_details');

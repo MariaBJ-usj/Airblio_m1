@@ -55,13 +55,13 @@ h4 {
     margin: 0;
 }
 
-#admin_title{
-    padding: 0;
-}
-
 #ajout_btn{
     margin-top: 50px;
     text-align: center;
+}
+
+#admin_navbar_logo{
+    height: 40px;
 }
 
 body {
