@@ -59,6 +59,11 @@ h4 {
     padding: 0;
 }
 
+#ajout_btn{
+    margin-top: 50px;
+    text-align: center;
+}
+
 body {
     background-color: #fbfbfb;
   }

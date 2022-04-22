@@ -40,3 +40,7 @@ Route::get('/formulaire_intervention', function () {
 Route::get('/equipes', function () {
     return view('equipes');
 })->name('equipes');
+
+Route::get('/materiels', function () {
+    return view('materiels');
+})->name('materiels');

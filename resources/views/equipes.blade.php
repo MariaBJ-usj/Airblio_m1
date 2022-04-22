@@ -11,6 +11,11 @@
             <h2 class="fw-light">Equipes</h2>
         </div>
     </section>
+    <div id="ajout_btn" class="btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="checkbox" checked autocomplete="off"> Ajouter une Equipe
+        </label>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12">
