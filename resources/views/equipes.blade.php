@@ -6,7 +6,7 @@
             $('#example').DataTable();
         });
     </script>
-    <section id="about_section" class="py-5 text-center container">
+    <section id="admin_title" class="text-center">
         <div class="col-lg-6 col-md-8 mx-auto">
             <h2 class="fw-light">Equipes</h2>
         </div>
@@ -33,9 +33,8 @@
                             <td>1</td>
                             <td>ACTIF</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -45,9 +44,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -57,9 +55,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -69,9 +66,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -81,9 +77,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -93,9 +88,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -105,9 +99,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -117,9 +110,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -129,9 +121,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -141,9 +132,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -153,9 +143,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -165,9 +154,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                         <tr>
@@ -177,9 +165,8 @@
                             <td>2</td>
                             <td>PRET</td>
                             <td>
-                                <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success">Modifier</button>
+                                <button type="button" class="btn btn-danger">Supprimer</button>
                             </td>
                         </tr>
                     </tbody>
