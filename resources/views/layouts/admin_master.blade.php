@@ -44,6 +44,12 @@
                     <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
                         data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
                         aria-controls="collapseExample2">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>Devis</span>
+                    </a>
+
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
+                        aria-controls="collapseExample2">
                         <i class="fas fa-chart-area fa-fw me-3"></i><span>Matériels</span>
                     </a>
 
@@ -57,6 +63,11 @@
                         data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
                         aria-controls="collapseExample2">
                         <i class="fas fa-chart-area fa-fw me-3"></i><span>Equipes</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
+                        aria-controls="collapseExample2">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>Employés</span>
                     </a>
                 </div>
             </div>

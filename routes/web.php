@@ -48,3 +48,11 @@ Route::get('/materiels', function () {
 Route::get('/materiel_details', function () {
     return view('materiel_details');
 })->name('materiel_details');
+
+Route::get('/employes', function () {
+    return view('employes');
+})->name('employes');
+
+Route::get('/devis', function () {
+    return view('devis');
+})->name('devis');
