@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('accueil');
 })->name('accueil');
@@ -64,3 +60,7 @@ Route::get('/demandes_etudes', function () {
 Route::get('/commandes', function () {
     return view('commandes');
 })->name('commandes');
+
+Route::get('/commande_details', function () {
+    return view('commande_details');
+})->name('commande_details');
