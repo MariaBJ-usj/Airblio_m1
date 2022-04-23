@@ -56,3 +56,11 @@ Route::get('/employes', function () {
 Route::get('/devis', function () {
     return view('devis');
 })->name('devis');
+
+Route::get('/demandes_etudes', function () {
+    return view('demandes_etudes');
+})->name('demandes_etudes');
+
+Route::get('/commandes', function () {
+    return view('commandes');
+})->name('commandes');

@@ -36,6 +36,12 @@
                     </a>
 
                     <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="#collapseExample1" aria-expanded="true"
+                        aria-controls="collapseExample1">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Demandes à Etudier</span>
+                    </a>
+
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
                         data-mdb-toggle="collapse" href="#collapseExample2" aria-expanded="true"
                         aria-controls="collapseExample2">
                         <i class="fas fa-chart-area fa-fw me-3"></i><span>Interventions</span>
