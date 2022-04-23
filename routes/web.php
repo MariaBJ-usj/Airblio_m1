@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('accueil');
 })->name('accueil');
 
+Route::get('/accueil', function () {
+    return view('accueil');
+})->name('accueil');
+
 Route::get('/indentification', function () {
     return view('indentification');
 })->name('indentification');
@@ -64,3 +68,7 @@ Route::get('/commandes', function () {
 Route::get('/commande_details', function () {
     return view('commande_details');
 })->name('commande_details');
+
+Route::get('/demande_etude_details', function () {
+    return view('demande_etude_details');
+})->name('demande_etude_details');

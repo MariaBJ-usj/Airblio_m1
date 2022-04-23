@@ -106,7 +106,7 @@
     <!--Main Navigation-->
 
     <!--Main layout-->
-    <main style="margin-top: 30px">
+    <main style="margin-top: 30px; padding-left: 240px">
         <div class="container pt-4">
           @yield("page-content")</div>
     </main>
