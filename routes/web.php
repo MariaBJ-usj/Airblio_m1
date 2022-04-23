@@ -76,3 +76,11 @@ Route::get('/demande_etude_details', function () {
 Route::get('/formulaire_devis', function () {
     return view('formulaire_devis');
 })->name('formulaire_devis');
+
+Route::get('/forgotten_password', function () {
+    return view('forgotten_password');
+})->name('forgotten_password');
+
+Route::get('/registration', function () {
+    return view('registration');
+})->name('registration');
