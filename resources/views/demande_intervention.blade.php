@@ -41,20 +41,8 @@
         <div class="row form-group">
             <label for="date" class="col-sm-1 col-form-label">Date</label>
             <div class="col-sm-4">
-                <div class="input-group date" id="datepicker">
-                    <input type="text" class="form-control">
-                    <span class="input-group-append">
-                        <span class="input-group-text bg-white d-block">
-                            <i class="fa fa-calendar"></i>
-                        </span>
-                    </span>
-                </div>
+                <input type="date" class="form-control" id="date" name="date">
             </div>
-            <script type="text/javascript">
-                $(function() {
-                    $('#datepicker').datepicker();
-                });
-            </script>
         </div><br />
         <div class="form-group">
             <label for="exampleFormControlInput1">Telephone</label>
@@ -72,7 +60,7 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     <section id="about_section" class="py-5 text-center container">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            <button type="submit" class="btn btn-primary mb-2">Envoyer</button>
         </div>
     </section>
 @endsection

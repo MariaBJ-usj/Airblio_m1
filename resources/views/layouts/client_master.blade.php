@@ -32,16 +32,19 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Accueil</a>
+                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">Accueil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Matériel</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Nos Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Le Groupe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Carrières</a>
                         </li>
                     </ul>
                     <span class="navbar-text">S'identifier

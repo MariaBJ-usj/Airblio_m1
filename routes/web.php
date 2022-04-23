@@ -72,3 +72,7 @@ Route::get('/commande_details', function () {
 Route::get('/demande_etude_details', function () {
     return view('demande_etude_details');
 })->name('demande_etude_details');
+
+Route::get('/formulaire_devis', function () {
+    return view('formulaire_devis');
+})->name('formulaire_devis');
