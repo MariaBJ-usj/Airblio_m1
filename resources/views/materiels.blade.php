@@ -1,3 +1,9 @@
+<?php
+  use Illuminate\Support\Facades\DB;
+ 
+  $equipments = DB::select('select * from materiel');
+?>
+
 @extends('layouts/admin_master')
 
 @section('page-content')
@@ -26,144 +32,23 @@
                             <th>NOM</th>
                             <th>TYPE</th>
                             <th>DATE D'ACQUISITION</th>
-                            <th>LIEU</th>
+                            <th>FIN DE VALIDITE</th>
+                            <th>NOMBRE DE VERIFICATIONS ANNUELLES</th>
                             <th>ACTIONS</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach($equipments as $equipment) { ?>
                         <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
+                            <td><?php echo $equipment->refMat ?></td>
+                            <td><?php echo $equipment->nomMat ?></td>
+                            <td><?php echo $equipment->typeMat ?></td>
+                            <td><?php echo $equipment->dateAcquis ?></td>
+                            <td><?php echo $equipment->finValidite ?></td>
+                            <td><?php echo $equipment->nbVerifAnnuel ?></td>
                         </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000</td>
-                            <td>XXXX</td>
-                            <td>XXXX</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>XXXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">Affecter</button>
-                                <button type="button" class="btn btn-success">Modifier</button>
-                                <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                        </tr>
-                        </tfoot>
+                        <?php } ?>
+                    </tbody>
                 </table>
             </div>
         </div>

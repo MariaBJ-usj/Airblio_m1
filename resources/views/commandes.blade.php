@@ -1,3 +1,9 @@
+<?php
+  use Illuminate\Support\Facades\DB;
+ 
+  $orders = DB::select('select * from commande');
+?>
+
 @extends('layouts/admin_master')
 
 @section('page-content')
@@ -24,38 +30,17 @@
                             <th>DEVIS</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody> 
+                        <?php foreach($orders as $order) { ?>
                         <tr>
-                            <td>00000000001</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>NOUVELLE INTERVENTION</td>
-                            <td>VALIDEE</td>
-                            <td>ACCEPTEE</td>
+                            <td><?php echo $order->idCom ?></td>
+                            <td><?php echo $order->dateCreation ?></td>
+                            <td><?php echo $order->type ?></td>
+                            <td><?php echo $order->etat ?></td>
+                            <td><?php echo $order->devisAccept ?></td>
                         </tr>
-                        <tr>
-                            <td>00000000002</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>ASSISTANCE</td>
-                            <td>VALIDEE</td>
-                            <td>ACCEPTEE</td>
-                        </tr>
-                        <tr>
-                            <td>00000000003</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>NOUVELLE INTERVENTION</td>
-                            <td>VALIDEE</td>
-                            <td>EN COURS</td>
-                        </tr>
+                        <?php } ?>
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>NUMERO DE COMMANDE</th>
-                            <th>DATE</th>
-                            <th>TYPE</th>
-                            <th>ETAT</th>
-                            <th>DEVIS</th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         </div>

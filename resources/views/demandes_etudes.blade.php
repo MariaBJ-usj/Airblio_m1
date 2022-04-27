@@ -1,4 +1,9 @@
 @extends('layouts/admin_master')
+<?php
+  use Illuminate\Support\Facades\DB;
+ 
+  $orders = DB::select('select * from commande c WHERE c.etat="ENCOURS" ');
+?>
 
 @section('page-content')
     <script>
@@ -16,52 +21,24 @@
             <div class="col-12">
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
-                        <tr>
-                            <th>NUMERO DE DEMANDE</th>
-                            <th>DATE DE RECEPTION</th>
-                            <th>TYPE</th>
-                            <th>DATE SOUHAITEE</th>
-                            <th>ACTIONS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>00000000001</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>NOUVELLE INTERVENTION</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-success">Visualiser la Demande</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000002</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>ASSISTANCE</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-success">Visualiser la Demande</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>00000000003</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>NOUVELLE INTERVENTION</td>
-                            <td>XX/XX/XXXX</td>
-                            <td>
-                                <button type="button" class="btn btn-success">Visualiser la Demande</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>NUMERO DE DEMANDE</th>
-                            <th>DATE DE RECEPTION</th>
-                            <th>TYPE</th>
-                            <th>DATE SOUHAITEE</th>
-                            <th>ACTIONS</th>
-                        </tr>
-                    </tfoot>
+                        <thead>
+                            <tr>
+                                <th>NUMERO DE COMMANDE</th>
+                                <th>DATE</th>
+                                <th>TYPE</th>
+                                <th>DEVIS</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <?php foreach($orders as $order) { ?>
+                            <tr>
+                                <td><?php echo $order->idCom ?></td>
+                                <td><?php echo $order->dateCreation ?></td>
+                                <td><?php echo $order->type ?></td>
+                                <td><?php echo $order->devisAccept ?></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
                 </table>
             </div>
         </div>
