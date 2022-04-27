@@ -29,12 +29,7 @@ Route::get('/connexion', function () {
     return view('connexion');
 })->name('connexion');
 
-<<<<<<< HEAD
-Route::get('/commandes', function () {
-    return view('commandes');
-})->name('commandes');
-=======
-Route::get('/demande_intervention', function () {
+sute::get('/demande_intervention', function () {
     return view('demande_intervention');
 })->name('demande_intervention');
 
@@ -89,4 +84,3 @@ Route::get('/forgotten_password', function () {
 Route::get('/registration', function () {
     return view('registration');
 })->name('registration');
->>>>>>> a169f85d7a7a1c0d47218ff0325789242a2e68aa
