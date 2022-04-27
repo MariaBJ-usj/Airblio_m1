@@ -29,7 +29,7 @@ Route::get('/connexion', function () {
     return view('connexion');
 })->name('connexion');
 
-sute::get('/demande_intervention', function () {
+Route::get('/demande_intervention', function () {
     return view('demande_intervention');
 })->name('demande_intervention');
 
