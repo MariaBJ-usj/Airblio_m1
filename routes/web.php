@@ -28,3 +28,7 @@ Route::get('/indentification', function () {
 Route::get('/connexion', function () {
     return view('connexion');
 })->name('connexion');
+
+Route::get('/commandes', function () {
+    return view('commandes');
+})->name('commandes');

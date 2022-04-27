@@ -16,3 +16,24 @@
     padding: 15px;
     margin: auto;
 }
+
+#nav {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.big {
+    display: flex;
+    justify-content: space-between;
+}
+.bottomGlobal {
+    display: flex;
+    justify-content: space-center;
+    padding:45px;
+    margin-left: 45px;
+}
+.bottom1{
+    margin-left: 27px;
+}
+.bottom2{
+    margin-top: 60px;
+}

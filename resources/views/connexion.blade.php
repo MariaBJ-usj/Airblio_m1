@@ -8,7 +8,7 @@ Connexion
 <div class="text-center form-signin text-black">
   <form>
     <img class="mb-4" src="{{url('/logos/png/Color logo - no background.png')}}" alt="" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 id="nav" class="h3 mb-3 fw-normal ">Please sign in</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
