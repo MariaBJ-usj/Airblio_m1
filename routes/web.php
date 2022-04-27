@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
+    return view('accueil');
+})->name('accueil');
+
+Route::get('/accueil', function () {
     return view('accueil');
 })->name('accueil');
 
@@ -29,6 +29,64 @@ Route::get('/connexion', function () {
     return view('connexion');
 })->name('connexion');
 
+<<<<<<< HEAD
 Route::get('/commandes', function () {
     return view('commandes');
 })->name('commandes');
+=======
+Route::get('/demande_intervention', function () {
+    return view('demande_intervention');
+})->name('demande_intervention');
+
+Route::get('/formulaire_intervention', function () {
+    return view('formulaire_intervention');
+})->name('formulaire_intervention');
+
+Route::get('/equipes', function () {
+    return view('equipes');
+})->name('equipes');
+
+Route::get('/materiels', function () {
+    return view('materiels');
+})->name('materiels');
+
+Route::get('/materiel_details', function () {
+    return view('materiel_details');
+})->name('materiel_details');
+
+Route::get('/employes', function () {
+    return view('employes');
+})->name('employes');
+
+Route::get('/devis', function () {
+    return view('devis');
+})->name('devis');
+
+Route::get('/demandes_etudes', function () {
+    return view('demandes_etudes');
+})->name('demandes_etudes');
+
+Route::get('/commandes', function () {
+    return view('commandes');
+})->name('commandes');
+
+Route::get('/commande_details', function () {
+    return view('commande_details');
+})->name('commande_details');
+
+Route::get('/demande_etude_details', function () {
+    return view('demande_etude_details');
+})->name('demande_etude_details');
+
+Route::get('/formulaire_devis', function () {
+    return view('formulaire_devis');
+})->name('formulaire_devis');
+
+Route::get('/forgotten_password', function () {
+    return view('forgotten_password');
+})->name('forgotten_password');
+
+Route::get('/registration', function () {
+    return view('registration');
+})->name('registration');
+>>>>>>> a169f85d7a7a1c0d47218ff0325789242a2e68aa
