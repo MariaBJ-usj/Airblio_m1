@@ -1,3 +1,10 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 main {
     color: black;
 }
@@ -40,12 +47,6 @@ main {
 }
 .bottom2{
     margin-top: 60px;
-}
-#demande_interventionForm {
-    width: 50%;
-    margin: 0 40px 0 40px;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 #map {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 27 avr. 2022 à 18:16
+-- Généré le : ven. 29 avr. 2022 à 16:04
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -40,14 +40,17 @@ CREATE TABLE IF NOT EXISTS `client` (
   `mail` varchar(256) NOT NULL,
   `mdp` varchar(128) NOT NULL,
   PRIMARY KEY (`idC`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `client`
 --
 
 INSERT INTO `client` (`idC`, `nomC`, `prenomC`, `tel`, `lieuNais`, `dateNais`, `adresse`, `sexe`, `mail`, `mdp`) VALUES
-(1, 'Cohen', 'Léa', '0642071328', 'Stains', '2001-03-11', '16 Avenue du 8 mai 1945', 'femme', 'lea.cohen0@dauphine.eu', 'admin');
+(1, 'Cohen', 'Léa', '0642071328', 'Stains', '2001-03-11', '16 Avenue du 2 juin 1945 Melun', 'femme', 'lea.cohen0@yahoo.com', 'admin'),
+(2, 'Azoulay', 'Liat', '0654789655', 'Sarcelles', '2000-03-31', '2 Rue Saint Honoré Sarcelles ', 'femme', 'dana.azoulay@yahoo.com', 'admin'),
+(3, 'Dupont', 'Marie', '0745685479', 'Paris ', '1995-04-08', '11 Rue du General de Gaulle Paris 75016', 'femme', 'marie.dupont@hotmail.fr', 'admin'),
+(4, 'Fred', 'Dupres', '0715243698', 'Goussainville', '2022-04-13', '15 Boulevard du Petit Houx Paris', 'homme', 'freddupres@yahoo.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -66,18 +69,30 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `idC` int(11) NOT NULL,
   `idInter` int(11) NOT NULL,
   `idEmp` int(11) NOT NULL,
+  `idSite` int(11) NOT NULL,
+  `Description` varchar(1000) NOT NULL,
   PRIMARY KEY (`idCom`),
   KEY `FK_idC` (`idC`),
   KEY `FK_Inter2` (`idInter`),
-  KEY `FK_Emp1` (`idEmp`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  KEY `FK_Emp1` (`idEmp`),
+   KEY `FK_Site` (`idSite`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
-INSERT INTO `commande` (`idCom`, `dateCreation`, `type`, `dateSouhaitee`, `etat`, `devisAccept`, `idC`, `idInter`, `idEmp`) VALUES
-(1, '2022-04-04', 'Nouvelle installation', '2022-06-16', 'ENCOURS', 1, 1, 1, 1);
+INSERT INTO `commande` (`idCom`, `dateCreation`, `type`, `dateSouhaitee`, `etat`, `devisAccept`, `idC`, `idInter`, `idEmp`, `Description`) VALUES
+(1, '2022-04-04', 'Nouvelle installation', '2022-06-16', 'ENCOURS', 1, 1, 1, 1, ''),
+(2, '2022-03-01', 'Maintenance', '2022-06-01', 'ENCOURS', 1, 2, 1, 2, ''),
+(3, '2022-03-22', 'Nouvelle installation', '2022-06-07', 'ENCOURS', 0, 1, 2, 2, ''),
+(4, '2022-03-15', 'Intervention urgente', '2022-07-19', 'ENCOURS', 1, 2, 2, 3, ''),
+(5, '2022-04-03', 'Maintenance', '2022-06-10', 'ENCOURS', 0, 4, 2, 4, ''),
+(6, '2022-04-10', 'Maintenance', '2022-06-09', 'ENCOURS', 1, 3, 3, 4, ''),
+(7, '2022-02-07', 'Maintenance', '2022-06-09', 'ANNULEE', 0, 4, 1, 1, ''),
+(8, '2022-03-16', 'Nouvelle installation', '2022-06-23', 'ACCEPTEE', 1, 2, 1, 3, ''),
+(9, '2022-04-04', 'Intervention urgente', '2022-05-18', 'EN_ATTENTE', 0, 3, 1, 3, ''),
+(10, '2022-05-25', 'Maintenance', '2022-06-08', 'TERMINEE', 1, 4, 2, 3, '');
 
 -- --------------------------------------------------------
 
@@ -110,14 +125,17 @@ CREATE TABLE IF NOT EXISTS `employé` (
   `idEq` int(11) NOT NULL,
   PRIMARY KEY (`idEmp`),
   KEY `FK_IDEq` (`idEq`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `employé`
 --
 
 INSERT INTO `employé` (`idEmp`, `userName`, `password`, `type`, `idEq`) VALUES
-(1, 'Ocloo', 'hello', 'financier', 1);
+(1, 'Ocloo', 'hello', 'financier', 1),
+(2, 'Bendriem', 'admin', 'Resp technique', 2),
+(3, 'Standler', 'admin', 'financier', 1),
+(4, 'Fell', 'admin', 'commercial', 2);
 
 -- --------------------------------------------------------
 
@@ -154,14 +172,18 @@ CREATE TABLE IF NOT EXISTS `equipeintervention` (
   `idSite` int(11) NOT NULL,
   PRIMARY KEY (`idEq`),
   KEY `FK_Site1` (`idSite`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `equipeintervention`
 --
 
 INSERT INTO `equipeintervention` (`idEq`, `dateCréation`, `idSite`) VALUES
-(1, '2022-05-13', 1);
+(1, '2022-05-13', 1),
+(2, '2019-12-04', 2),
+(3, '2020-04-16', 1),
+(4, '2017-04-12', 2),
+(5, '2019-06-07', 2);
 
 -- --------------------------------------------------------
 
@@ -183,14 +205,16 @@ CREATE TABLE IF NOT EXISTS `intervention` (
   PRIMARY KEY (`idInter`),
   KEY `FK_Com1` (`idCom`),
   KEY `FK_Eq1` (`idEq`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `intervention`
 --
 
 INSERT INTO `intervention` (`idInter`, `dateDébut`, `dateFin`, `lienFicheIntervention`, `procédure`, `profondeur`, `nbHréel`, `idCom`, `idEq`) VALUES
-(1, '2022-06-16', '2022-06-19', '/', '/', 0, 28, 1, 1);
+(1, '2022-06-16', '2022-06-19', '/', '/', 0, 28, 1, 1),
+(2, '2022-06-02', '2022-06-10', '/', '/', 0, 100, 2, 2),
+(3, '2019-07-22', '2022-07-23', '/', '/', 0, 17, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -235,14 +259,16 @@ CREATE TABLE IF NOT EXISTS `sites` (
   `idEntrepot` int(11) NOT NULL,
   PRIMARY KEY (`idSite`),
   KEY `FK_IDEntrepot` (`idEntrepot`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `sites`
 --
 
 INSERT INTO `sites` (`idSite`, `latitude`, `longitude`, `denomination`, `idEntrepot`) VALUES
-(1, 0, 0, '/', 1);
+(1, 0, 0, '/', 1),
+(2, 0, 0, '/', 1),
+(3, 0, 0, '/', 1);
 
 -- --------------------------------------------------------
 

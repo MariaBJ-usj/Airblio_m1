@@ -12,6 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/toto', function () {
+    return view('toto');
+})->name('toto');
+
+Route::get('/test', function () {
+    return view('test');
+})->name('test');
+
+Route::post('/test', function () {
+    return view('test');
+})->name('test');
 
 Route::get('/', function () {
     return view('accueil');
@@ -28,6 +39,10 @@ Route::get('/indentification', function () {
 Route::get('/connexion', function () {
     return view('connexion');
 })->name('connexion');
+
+Route::post('/demande_intervention', function () {
+    return view('demande_intervention');
+})->name('demande_intervention');
 
 Route::get('/demande_intervention', function () {
     return view('demande_intervention');
