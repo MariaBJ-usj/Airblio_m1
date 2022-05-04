@@ -12,37 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/toto', function () {
-    return view('toto');
-})->name('toto');
-
-Route::get('/test', function () {
-    return view('test');
-})->name('test');
-
-Route::post('/test', function () {
-    return view('test');
-})->name('test');
 
 Route::get('/', function () {
     return view('accueil');
-})->name('accueil');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('/accueil', function () {
     return view('accueil');
 })->name('accueil');
 
-Route::get('/indentification', function () {
-    return view('indentification');
-})->name('indentification');
+require __DIR__.'/auth.php';
 
-Route::get('/connexion', function () {
-    return view('connexion');
-})->name('connexion');
+Auth::routes();
 
-Route::post('/demande_intervention', function () {
-    return view('demande_intervention');
-})->name('demande_intervention');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/demande_intervention', function () {
     return view('demande_intervention');
@@ -92,10 +79,6 @@ Route::get('/formulaire_devis', function () {
     return view('formulaire_devis');
 })->name('formulaire_devis');
 
-Route::get('/forgotten_password', function () {
-    return view('forgotten_password');
-})->name('forgotten_password');
-
-Route::get('/registration', function () {
-    return view('registration');
-})->name('registration');
+Route::get('/formulaire_devis', function () {
+    return view('formulaire_devis');
+})->name('formulaire_devis');

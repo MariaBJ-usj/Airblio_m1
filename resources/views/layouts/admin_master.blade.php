@@ -16,7 +16,7 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/google_maps.js') }}"></script>
-    <link rel="stylesheet" text="css" href="{{ url('/css/app.css') }}">
+    <link rel="stylesheet" text="css" href="{{ url('/css/airblio.css') }}">
     <title>Airblio @yield("title")</title>
 </head>
 
