@@ -1,7 +1,7 @@
 <?php
-  use Illuminate\Support\Facades\DB;
- 
-  $orders = DB::select('select * from commande');
+use Illuminate\Support\Facades\DB;
+
+$orders = DB::select('select * from commande');
 ?>
 
 <x-app-layout>
@@ -9,7 +9,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Commandes') }}
         </h2>
-        
+
     </x-slot>
 
     <div class="py-12">
@@ -31,16 +31,23 @@
                                         <th>TYPE</th>
                                         <th>ETAT</th>
                                         <th>DEVIS</th>
+                                        <th>ACTIONS</th>
                                     </tr>
                                 </thead>
-                                <tbody> 
-                                    <?php foreach($orders as $order) { ?>
+                                <tbody>
+                                    <?php foreach($orders as $order) { $id=$order->idCom;?>
+                                        
                                     <tr>
-                                        <td><?php echo $order->idCom ?></td>
-                                        <td><?php echo $order->dateCreation ?></td>
-                                        <td><?php echo $order->type ?></td>
-                                        <td><?php echo $order->etat ?></td>
-                                        <td><?php echo $order->devisAccept ?></td>
+                                        <td><?php echo $order->idCom; ?></td>
+                                        <td><?php echo $order->dateCreation; ?></td>
+                                        <td><?php echo $order->type; ?></td>
+                                        <td><?php echo $order->etat; ?></td>
+                                        <td><?php echo $order->devisAccept; ?></td>
+                                        <td>
+                                            <a href="{{ route('commande_details', [$id]) }}">
+                                                <button type="button" class="btn btn-primary bg-primary">Détails</button>
+                                            </a>
+                                        </td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>

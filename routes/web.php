@@ -35,6 +35,10 @@ Route::get('/demande_intervention', function () {
     return view('demande_intervention');
 })->name('demande_intervention');
 
+Route::post('/demande_intervention', function () {
+    return view('demande_intervention');
+})->name('demande_intervention');
+
 Route::get('/formulaire_intervention', function () {
     return view('formulaire_intervention');
 })->name('formulaire_intervention');
@@ -67,9 +71,17 @@ Route::get('/commandes', function () {
     return view('commandes');
 })->name('commandes');
 
-Route::get('/commande_details', function () {
-    return view('commande_details');
+Route::post('/commandes', function () {
+    return view('commandes');
+});
+
+Route::get('/commande_details/{id}', function ($id) {
+    return view('commande_details', ['id' => $id]);
 })->name('commande_details');
+
+Route::post('/commande_details/{id}', function ($id) {
+    return view('commande_details', ['id' => $id]);
+})->name('commande_details_post');
 
 Route::get('/demande_etude_details', function () {
     return view('demande_etude_details');
