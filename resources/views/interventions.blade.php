@@ -1,13 +1,13 @@
 <?php
 use Illuminate\Support\Facades\DB;
 
-$orders = DB::select('select * from commande c WHERE c.etat="ACCEPTEE" OR  c.etat="APPROUVEE"');
+$orders = DB::select('select * from intervention" ');
 ?>
 
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Demandes à Etudier') }}
+            {{ __('Interventions') }}
         </h2>
 
     </x-slot>
@@ -39,23 +39,19 @@ $orders = DB::select('select * from commande c WHERE c.etat="ACCEPTEE" OR  c.eta
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($orders as $order) { $id=$order->idCom; $etat=$order->etat;?>
+                                    <?php foreach($orders as $order) { $id=$order->idCom;?>
                                     <tr>
                                         <td><?php echo $order->idCom; ?></td>
                                         <td><?php echo $order->dateCreation; ?></td>
                                         <td><?php echo $order->type; ?></td>
                                         <td><?php echo $order->devisAccept; ?></td>
                                         <td>
-                                            <a href="{{ route('demande_etude_details', [$id]) }}">
+                                            <a href="{{ route('intervention_details', [$id]) }}">
                                                 <button type="button" class="btn btn-primary bg-primary">Détails</button>
                                             </a>
-                                            <?php 
-                                            if ($etat=="APPROUVEE") {?>
                                             <a href="{{ route('formulaire_intervention', [$id]) }}">
-                                                <button type="button"
-                                                    class="btn btn-success bg-success">Démarrage</button>
+                                                <button type="button" class="btn btn-success bg-success">Démarrage</button>
                                             </a>
-                                        <?php ;}?>
                                         </td>
                                     </tr>
                                     <?php } ?>
