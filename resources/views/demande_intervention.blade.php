@@ -1,5 +1,11 @@
 <?php
   use Illuminate\Support\Facades\DB;
+  $mail=Auth::user()->email;
+  $mdp=Auth::user()->password;
+  $client = DB::table('clients')
+    ->where('mail', $mail)
+    ->where('mdp', $mdp)
+    ->first();
 ?>
 @extends('layouts/client_master')
 
@@ -13,6 +19,7 @@
   <p>Bonjour, vous nous avez bien sollicité pour une <?php echo $_POST["gridRadios"] ?>, le <?php echo $_POST["date"] ?> à l'adresse "<?php echo $_POST["places"] ?>".</p>
   <p>La description de cettes commande est : <?php echo $_POST["description"] ?>.</p>
   <?php
+
     $idSite = DB::table('sites')->insertGetId(
       array(
         'latitude' => $_POST["latitude"],
@@ -22,7 +29,7 @@
     );
     DB::table('commande')->insert(
       array(
-        'idC' => 1, // TODO
+        'idC' => $client->idC,
         'dateCreation' => date('Y-m-d'),
         'type' => $_POST["gridRadios"],
         'dateSouhaitee' => $_POST["date"],

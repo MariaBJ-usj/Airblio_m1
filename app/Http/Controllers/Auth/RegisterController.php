@@ -67,14 +67,16 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data)
+
     {
+        $mdp=Hash::make($data['password']);
         $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'birth_date' => $data['birth_date'],
             'phone' => $data['phone'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => $mdp,
         ]);
 
         $client = Client::create([
@@ -83,7 +85,7 @@ class RegisterController extends Controller
             'dateNais' => $data['birth_date'],
             'tel' => $data['phone'],
             'mail' => $data['email'],
-            'mdp' => Hash::make($data['password']),
+            'mdp' => $mdp,
         ]);
 
         return $user;

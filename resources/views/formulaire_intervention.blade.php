@@ -30,14 +30,15 @@ if (isset($_POST['refuse'])) {
 
 ?>
 <script>
-    
+    var matNum=0;
     function myFunctionAdd() {
         var $div = $('div[id^="materielDiv"]:last');
         var num = parseInt( $div.prop("id").match(/\d+/g), 10 );
         var num2 = num+1;
         var $klon =  $('#materielDiv'+num).clone().prop('id', 'materielDiv'+num2 );
         $('#materielDiv'+num).after($klon);
-        
+        matNum++;
+        alert(matNum);
     };
 
     function myFunctionDelete() {
@@ -45,8 +46,9 @@ if (isset($_POST['refuse'])) {
         var num = parseInt( $div.prop("id").match(/\d+/g), 10 );
         if (num>0) {
            $('#materielDiv'+num).remove(); 
+           matNum--;
+           alert(matNum);
         }
-        
     };
 
     // Initialize and add the map
@@ -141,7 +143,7 @@ if (isset($_POST['refuse'])) {
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="typeNumber">Profondeur</label>
-                                                    <input type="number" id="typeNumber" class="form-control" min="3"
+                                                    <input type="number" id="typeNumber" class="form-control" min="3" value="5"
                                                         max="500" />
                                                 </div>
                                             </div>
@@ -167,8 +169,9 @@ if (isset($_POST['refuse'])) {
                                                 <div class="form-group">
                                                     <label for="">Nom Matériel</label>
                                                     <select class="form-control" id="">
-                                                        <?php foreach ($materiels as $materiel) {
-                                                            if ($materiel->idCom==0) {?>
+                                                        <?php 
+                                                            foreach ($materiels as $materiel) {
+                                                            if ($materiel->nbCom==0) {?>
                                                         <option><?php echo $materiel->nomMat; ?></option>
                                                         <?php ;};} ?>
                                                     </select>
@@ -178,14 +181,9 @@ if (isset($_POST['refuse'])) {
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="">Nombre</label>
-                                                    <select class="form-control" id="">
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                        <option>6</option>
-                                                        <option>7</option>
-                                                    </select>
+                                                    <label for="typeNumber">Nombre</label>
+                                                    <input type="number" id="typeNumber" class="form-control" min="1" value="1"
+                                                        max="500" />
                                                 </div>
 
                                             </div>
