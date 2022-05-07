@@ -1,7 +1,11 @@
 <?php
 use Illuminate\Support\Facades\DB;
 
-$orders = DB::select('select * from intervention" ');
+$orders = DB::select('select * from intervention');
+$order = DB::table('intervention')
+    ->join('clients', 'clients.idC', '=', 'commande.idC')
+    ->join('sites', 'sites.idSite', '=', 'commande.idSite')=
+    ->get();
 ?>
 
 <x-app-layout>
@@ -31,8 +35,7 @@ $orders = DB::select('select * from intervention" ');
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>NUMERO DE COMMANDE</th>
-                                        <th>DATE</th>
+                                        <th>NUMERO INTERVENTION</th>
                                         <th>TYPE</th>
                                         <th>DEVIS</th>
                                         <th>ACTIONS</th>

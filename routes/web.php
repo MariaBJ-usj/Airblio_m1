@@ -99,6 +99,14 @@ Route::get('/formulaire_intervention/{id}', function ($id) {
     return view('formulaire_intervention', ['id' => $id]);
 })->name('formulaire_intervention');
 
+Route::post('/formulaire_intervention/{id}', function ($id) {
+    return view('formulaire_intervention', ['id' => $id]);
+})->name('formulaire_intervention_post');
+
 Route::get('/formulaire_devis', function () {
     return view('formulaire_devis');
 })->name('formulaire_devis');
+
+Route::get('/interventions', function () {
+    return view('interventions');
+})->name('interventions');
