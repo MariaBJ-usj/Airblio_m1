@@ -74,6 +74,9 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Se déconnecter') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('demande_intervention') }}">
+                                        {{ __('Demande d\'intervention') }}
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

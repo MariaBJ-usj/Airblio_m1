@@ -1,10 +1,9 @@
 <?php
 use Illuminate\Support\Facades\DB;
 
-$orders = DB::select('select * from intervention');
-$order = DB::table('intervention')
-    ->join('clients', 'clients.idC', '=', 'commande.idC')
-    ->join('sites', 'sites.idSite', '=', 'commande.idSite')=
+$orders = DB::table('intervention')
+    ->join('commande', 'commande.idCom', '=', 'intervention.idCom')
+    ->join('employé', 'employé.idEmp', '=', 'intervention.idExpert')
     ->get();
 ?>
 
@@ -24,11 +23,6 @@ $order = DB::table('intervention')
                         $('#example').DataTable();
                     });
                 </script>
-                <script>
-                    $(document).ready(function() {
-                        $('#example').DataTable();
-                    });
-                </script>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -36,24 +30,32 @@ $order = DB::table('intervention')
                                 <thead>
                                     <tr>
                                         <th>NUMERO INTERVENTION</th>
+                                        <th>DATE DEBUT</th>
+                                        <th>DATE FIN</th>
                                         <th>TYPE</th>
-                                        <th>DEVIS</th>
+                                        <th>EQUIPE</th>
+                                        <th>EXPERT</th>
                                         <th>ACTIONS</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach($orders as $order) { $id=$order->idCom;?>
                                     <tr>
-                                        <td><?php echo $order->idCom; ?></td>
-                                        <td><?php echo $order->dateCreation; ?></td>
+                                        <td><?php echo $order->idIntervention; ?></td>
+                                        <td><?php echo $order->dateDébut; ?></td>
+                                        <td><?php echo $order->dateFin; ?></td>
                                         <td><?php echo $order->type; ?></td>
-                                        <td><?php echo $order->devisAccept; ?></td>
+                                        <td><?php echo $order->idEq; ?></td>
+                                        <td><?php echo $order->userName; ?></td>
                                         <td>
-                                            <a href="{{ route('intervention_details', [$id]) }}">
+                                            <a href="{{ route('formulaire_intervention', [$id]) }}">
                                                 <button type="button" class="btn btn-primary bg-primary">Détails</button>
                                             </a>
                                             <a href="{{ route('formulaire_intervention', [$id]) }}">
-                                                <button type="button" class="btn btn-success bg-success">Démarrage</button>
+                                                <button type="button" class="btn btn-success bg-success">Terminer</button>
+                                            </a>
+                                            <a href="{{ route('formulaire_intervention', [$id]) }}">
+                                                <button type="button" class="btn btn-danger bg-danger">Annuler</button>
                                             </a>
                                         </td>
                                     </tr>

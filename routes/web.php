@@ -83,10 +83,6 @@ Route::post('/commande_details/{id}', function ($id) {
     return view('commande_details', ['id' => $id]);
 })->name('commande_details_post');
 
-// Route::get('/demande_etude_details', function () {
-//     return view('demande_etude_details');
-// })->name('demande_etude_details');
-
 Route::get('/demande_etude_details/{id}', function ($id) {
     return view('demande_etude_details', ['id' => $id]);
 })->name('demande_etude_details');
@@ -103,8 +99,8 @@ Route::post('/formulaire_intervention/{id}', function ($id) {
     return view('formulaire_intervention', ['id' => $id]);
 })->name('formulaire_intervention_post');
 
-Route::get('/formulaire_devis', function () {
-    return view('formulaire_devis');
+Route::get('/formulaire_devis/{id}', function ($id) {
+    return view('formulaire_devis', ['id' => $id]);
 })->name('formulaire_devis');
 
 Route::get('/interventions', function () {

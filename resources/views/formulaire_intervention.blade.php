@@ -11,7 +11,7 @@ $equipes = DB::select('select * from equipes');
 
 $materiels = DB::select('select * from materiel');
 
-$resps = DB::select('select * from employé where type="respTechnique"');
+$resps = DB::select('select * from employé where role="respTechnique"');
 
 if (isset($_POST['intervention'])) {
     $fiche = '/fiche_intervention_commande_n_';
@@ -22,12 +22,18 @@ if (isset($_POST['intervention'])) {
         'procédure' => $_POST['procedure'],
         'profondeur' => $_POST['profondeur'],
         'descriptif' => $_POST['descriptif'],
-        'idCom' => $order->idCom,
+        'idCommande' => $order->idCom,
         'idEq' => $_POST['equipe'],
         'idExpert' => $_POST['expert'],
         'nbHréel' => $_POST['nbHeures'],
         'lienFicheIntervention' => $fiche,
     ]);
+
+    DB::table('commande')
+        ->where('idCom', $id)
+        ->update(['etat' => 'ENCOURS']);
+    header("Location: " . URL::to('/demandes_etudes'), true, 302);
+    exit();
 
     $intervention = DB::table('intervention')
     ->where('idCom', $id)
