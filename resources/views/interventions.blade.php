@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\DB;
 
 $orders = DB::table('intervention')
-    ->join('commande', 'commande.idCom', '=', 'intervention.idCom')
+    ->join('commande', 'commande.idCom', '=', 'intervention.idCommande')
     ->join('employé', 'employé.idEmp', '=', 'intervention.idExpert')
     ->get();
 ?>
@@ -47,8 +47,8 @@ $orders = DB::table('intervention')
                                         <td><?php echo $order->type; ?></td>
                                         <td><?php echo $order->idEq; ?></td>
                                         <td><?php echo $order->userName; ?></td>
-                                        <td>
-                                            <a href="{{ route('formulaire_intervention', [$id]) }}">
+                                        <td style="text-align: center">
+                                            <a href="{{ route('fiche_intervention', [$id]) }}">
                                                 <button type="button" class="btn btn-primary bg-primary">Détails</button>
                                             </a>
                                             <a href="{{ route('formulaire_intervention', [$id]) }}">
@@ -56,6 +56,9 @@ $orders = DB::table('intervention')
                                             </a>
                                             <a href="{{ route('formulaire_intervention', [$id]) }}">
                                                 <button type="button" class="btn btn-danger bg-danger">Annuler</button>
+                                            </a>
+                                            <a href="{{ route('formulaire_intervention', [$id]) }}" >
+                                                <button type="button" class="btn btn-warning bg-warning" style="margin-top: 5px">Imprimer la fiche d'intervention</button>
                                             </a>
                                         </td>
                                     </tr>

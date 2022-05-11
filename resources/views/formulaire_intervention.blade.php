@@ -32,14 +32,12 @@ if (isset($_POST['intervention'])) {
     DB::table('commande')
         ->where('idCom', $id)
         ->update(['etat' => 'ENCOURS']);
-    header("Location: " . URL::to('/demandes_etudes'), true, 302);
-    exit();
 
     $intervention = DB::table('intervention')
-    ->where('idCom', $id)
+    ->where('idCommande', $id)
     ->first();
 
-    $idInter=$intervention->idInter;
+    $idInter=$intervention->idIntervention;
 
     $materialDivCounter = 0;
     while (true) {
@@ -55,15 +53,11 @@ if (isset($_POST['intervention'])) {
                 'nbMat' => $_POST[$matNb],
                 'idInter' => $idInter,
             ]);  
-        }else{
-            break;
-            header("Location: " . URL::to('/intervention'), true, 302);
-            exit();
         }
         $materialDivCounter++;
         } catch (ErrorException $e) {
             break;
-            header("Location: " . URL::to('/intervention'), true, 302);
+            header("Location: " . URL::to('/devis'), true, 302);
             exit();
         }   
     }

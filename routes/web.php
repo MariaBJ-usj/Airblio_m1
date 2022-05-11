@@ -106,3 +106,7 @@ Route::get('/formulaire_devis/{id}', function ($id) {
 Route::get('/interventions', function () {
     return view('interventions');
 })->name('interventions');
+
+Route::get('/fiche_intervention/{id}', function ($id) {
+    return view('fiche_intervention', ['id' => $id]);
+})->name('fiche_intervention');

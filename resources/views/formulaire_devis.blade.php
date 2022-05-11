@@ -53,18 +53,24 @@ if (isset($_POST['accept'])) {
                                     <div class="row">
                                         <?php foreach($materials as $material) { ?>
                                         <div class="row">
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlSelect1" style="padding-top: 38px">{{$material->nomMat}}</label>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1" style="padding-top: 38px">{{$material->nbMat}}</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
                                                 <label for="exampleFormControlSelect1">Prix</label>
                                                     <input type="text" class="form-control"
                                                         id="formGroupExampleInput">
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlSelect1">Expédition</label>
                                                     <input type="text" class="form-control"
@@ -72,7 +78,7 @@ if (isset($_POST['accept'])) {
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlSelect1">Location</label>
                                                     <input type="text" class="form-control"

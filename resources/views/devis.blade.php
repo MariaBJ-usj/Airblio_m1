@@ -1,7 +1,9 @@
 <?php
 use Illuminate\Support\Facades\DB;
 
-$orders = DB::select('select * from commande');
+$orders = DB::table('intervention')
+    ->join('commande', 'commande.idCom', '=', 'intervention.idCommande')
+    ->get();
 
 ?>
 
