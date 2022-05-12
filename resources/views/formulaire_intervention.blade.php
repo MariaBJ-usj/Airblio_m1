@@ -57,12 +57,12 @@ if (isset($_POST['intervention'])) {
         $materialDivCounter++;
         } catch (ErrorException $e) {
             break;
-            header("Location: " . URL::to('/devis'), true, 302);
+            header("Location: " . URL::to('/interventions'), true, 302);
             exit();
-        } 
-        header("Location: " . URL::to('/devis'), true, 302);
-            exit();  
+        }  
     }
+    header("Location: " . URL::to('/interventions'), true, 302);
+    exit();
 }
 
 ?>
