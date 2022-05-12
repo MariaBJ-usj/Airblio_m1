@@ -145,7 +145,7 @@
                                 alt="">
                         </h6>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Plus faibles sont les risques, meilleure est l'entreprise.
                         </p>
                     </div>
                     <!-- Grid column -->

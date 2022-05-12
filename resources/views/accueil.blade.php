@@ -18,22 +18,22 @@
             <div class="carousel-item active">
                 <img src="{{ url('/images/carousel_image_1.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <h5>Plongez avec Qualité!</h5>
+                    <p>Admirez la beauté des océans avec Airblio</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{ url('/images/carousel_image_2.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <h5>Matériel Incroyable</h5>
+                    <p>Découvrez notre gamme de très bonne qualité</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{ url('/images/carousel_image_3.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <h5>Découvrez nos Equipes</h5>
+                    <p>Faites la connaissance des groupes qui exécuterons vos interventions</p>
                 </div>
             </div>
         </div>
@@ -71,9 +71,7 @@
                             <figure class="text-center mb-0">
                                 <blockquote class="blockquote mb-4">
                                     <p>
-                                        <span class="font-italic">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Pariatur sint nesciunt ad itaque aperiam expedita officiis incidunt minus
-                                            facere molestias inventore.</span>
+                                        <span class="font-italic">« Venir ensemble est un commencement; rester ensemble est un progrès; travailler ensemble est un succès »</span>
                                     </p>
                                 </blockquote>
                                 <figcaption class="blockquote-footer mb-0">
@@ -93,21 +91,18 @@
         </div>
         <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
             <li>
-                <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
+                <p class="fs-110 font-cond-l" contenteditable="false">"Equipe dynamique et compétente."</p>
                 <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Jane Doe</h5>
                 <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Business Woman - New
                     York</small>
             </li>
             <li>
-                <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
+                <p class="fs-110 font-cond-l" contenteditable="false">"Je suis satisfait de ma demande."</p>
                 <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">John Doe</h5>
                 <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Plongeur - Paris</small>
             </li>
             <li>
-                <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
+                <p class="fs-110 font-cond-l" contenteditable="false">"Matériel de très bonne qualité!"</p>
                 <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Joe Doe</h5>
                 <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Manager - Marseille</small>
             </li>
