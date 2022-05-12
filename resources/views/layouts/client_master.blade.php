@@ -69,14 +69,20 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('demande_intervention') }}">
+                                        {{ __('Mes Interventions') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('demande_intervention') }}">
+                                        {{ __('Demande d\'intervention') }}
+                                    </a>
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Se déconnecter') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('demande_intervention') }}">
-                                        {{ __('Demande d\'intervention') }}
-                                    </a>
+                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

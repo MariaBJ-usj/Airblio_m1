@@ -23,7 +23,7 @@ if (isset($_POST['intervention'])) {
         'profondeur' => $_POST['profondeur'],
         'descriptif' => $_POST['descriptif'],
         'idCommande' => $order->idCom,
-        'idEq' => $_POST['equipe'],
+        'idEquipe' => $_POST['equipe'],
         'idExpert' => $_POST['expert'],
         'nbHréel' => $_POST['nbHeures'],
         'lienFicheIntervention' => $fiche,
@@ -59,7 +59,9 @@ if (isset($_POST['intervention'])) {
             break;
             header("Location: " . URL::to('/devis'), true, 302);
             exit();
-        }   
+        } 
+        header("Location: " . URL::to('/devis'), true, 302);
+            exit();  
     }
 }
 

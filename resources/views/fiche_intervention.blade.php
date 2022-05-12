@@ -19,7 +19,7 @@ $materials = DB::table('materiel_intervention')
 if (isset($_POST['approve'])) {
     DB::table('commande')
         ->where('idCom', $id)
-        ->update(['etat' => 'APPROUVEE']);
+        ->update(['etat' => 'TERMINEE']);
     header('Location: ' . URL::to('/demandes_etudes'), true, 302);
     exit();
 }
@@ -86,10 +86,10 @@ if (isset($_POST['refuse'])) {
                                             {{ __('Fiche Intervention') }} {{ $order->idIntervention }}
                                         </p>
                                         <div class="text-center mb-3 col-md-12">
-                                            <div id="map" class="map-container mt-5" style="height: 350px; width: 50%">
+                                            <div id="map" class="map-container mt-5" style="height: 350px; width: 50%"></div>
                                                 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiL8XJNvgWBPbLETYSRbgp7fPe7OZgEUA&callback=initMap"
                                                                                                 defer></script>
-                                            </div>
+                                            
                                         </div>
 
                                         <div class="col-md-6 mt-4">
